@@ -3,51 +3,53 @@ An interactive web application for designing isolation windows for mass spectrom
 
 ![Isolation_window](https://github.com/user-attachments/assets/223f6fd9-77cb-4947-86c2-a95299b4fd7d)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-About:
+## About:
   This tool was developed as part of the research described in:
   [Chan et al. (2025). "IsoPS-DIA: An Dual Functional Approach for Absolute Oncoprotein Mutation Quantification and Proteome Profiling", Under revewing]
 
-Features:
+## Features:
   1. Upload CSV data containing targeted precursors' MZ and RT values
   2. Interactive visualization of the distribution of targeted precursors' MZ
   3. Manual and automated creation of isolation windows
   4. Precision mode for fine-tuning window boundaries
   5. Export window definitions for direct use in MS experiments
 
-Installation:
-  Prerequisites
+## Installation:
+### Prerequisites
     Python 3.8 or higher
-
-  Setup:
-    Clone this repository: bashgit clone https://github.com/yourusername/IsoPS-Window-Designer.git 
+### Setup:
+1. Clone this repository:
+  ``` bash
+    git clone https://github.com/Isaac-Chiu/IsoPS-Window-Designer.git
     cd IsoPS-Window-Designer
-
-  Create a virtual environment (recommended):
+  ```
+2. Create a virtual environment (recommended):
+  ``` bash
     bashpython -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-  Install required packages:
-    bashpip install -r requirements.txt
-  Usage:
-
-Run the application:
-
-  bashpython app.py
-
-  Open your web browser and navigate to http://127.0.0.1:8050/
-  Upload your MS data CSV file using the "Upload CSV" button. Your CSV should contain at minimum:
-
-  MZ: m/z values
-  RT: retention time values
-
-
-  Optional columns that enhance functionality:
+  ```
+3. Install required packages:
+  ``` bash
+    pip install -r requirements.txt
+  ```
+### Usage:
+1. Run the application:
+  ``` bash
+  python IsoPS_code_v1.16.py
+  ```
+2. Open your web browser and navigate to http://127.0.0.1:8050/
+   
+3. Upload your MS data CSV file using the "Upload CSV" button. Your CSV should contain at minimum:
+   
+  * MZ: m/z values
+  * RT: retention time values
+    
+4. Optional columns that enhance functionality:
   
-  Name: Compound identifiers
-  Types: "Light" or other values (affects point opacity)
-  Charge: Charge state information
-  MZp1, MZp2: Additional m/z values for isotopes or fragments
+  * Name: Compound identifiers
+  * Types: "Light" or "Heavy" values (affects point opacity)
+  * Charge: Charge state information (For calculate isotopes m/z)
+  * MZp1, MZp2: Additional m/z values for isotopes
 
 
   Create isolation windows by:
