@@ -13,11 +13,12 @@ An interactive web application for designing isolation windows for mass spectrom
   3. Manual and automated creation of isolation windows
   4. Precision mode for fine-tuning window boundaries
   5. Export window definitions for direct use in MS experiments
+  6. R program for preparing the data as the example files
 
 ## Installation:
 ### Prerequisites
     Python 3.8 or higher
-### Setup:
+## Setup:
 1. Clone this repository:
   ``` bash
     git clone https://github.com/Isaac-Chiu/IsoPS-Window-Designer.git
@@ -32,42 +33,55 @@ An interactive web application for designing isolation windows for mass spectrom
   ``` bash
     pip install -r requirements.txt
   ```
-### Usage:
+## Usage:
 1. Run the application:
   ``` bash
   python IsoPS_code_v1.16.py
   ```
 2. Open your web browser and navigate to http://127.0.0.1:8050/
    
-3. Upload your MS data CSV file using the "Upload CSV" button. Your CSV should contain at minimum:
-   
-  * MZ: m/z values
-  * RT: retention time values
-    
-4. Optional columns that enhance functionality:
+3. Upload your MS data CSV file using the "Upload CSV" button. Your CSV should contain at minimum: 
+    * MZ: m/z values
+    * RT: retention time values
+
+4. Create isolation windows by:
+    * Manually adding lines at specific m/z positions
+    * Using the "Auto-Fill" feature to automatically fill gaps
+    * Dragging lines to adjust their positions
+    * Use "Precise Line Drag Mode" for fine-tuning window boundaries
+    * Download your isolation windows as CSV with the "Download Lines" button
   
+5. Program Interface
+
+    ![image](https://github.com/user-attachments/assets/c14ff401-d0e1-4063-b2de-9a7006beb2a0)
+
+    ![image](https://github.com/user-attachments/assets/88720fdb-60ee-405d-a80b-f9e56253051c)
+
+    
+5. The Data format of the CSV file:
+
+    Provide skyline out put or your data in the following format:
+    ![image](https://github.com/user-attachments/assets/02a7e99b-a45b-4fbe-a90e-2323f8f755df)
+  
+    Use Dataframe_preparation_1.01.R to prepare ready-to-use CSV file (or prepare it elsewhere):
+    ![image](https://github.com/user-attachments/assets/5e88d356-eddd-41b8-8eb0-fdbece01f3c4)
+  
+  It will contain
   * Name: Compound identifiers
   * Types: "Light" or "Heavy" values (affects point opacity)
   * Charge: Charge state information (For calculate isotopes m/z)
   * MZp1, MZp2: Additional m/z values for isotopes
+  * Predefine Isolation window (0.5 th before the target precursors)
 
-
-  Create isolation windows by:
-  
-  Manually adding lines at specific m/z positions
-  Using the "Auto-Fill" feature to automatically fill gaps
-  Dragging lines to adjust their positions
-
-
-  Use "Precise Line Drag Mode" for fine-tuning window boundaries
-  Download your isolation windows as CSV with the "Download Lines" button
-
-Example Data:
+## Example Data:
   Sample datasets are provided in the example_data/ folder to help you get started.
-Contributing:
+  
+## Contributing:
   Contributions to improve IsoPS Window Designer are welcome. Please feel free to submit pull requests or create issues for bugs and feature requests.
-License:
+
+## License:
   This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments:
+  
+## Acknowledgments:
   List any funding sources or acknowledgments from your paper
   Any libraries or tools that were particularly helpful
