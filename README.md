@@ -58,7 +58,7 @@ An interactive web application for designing isolation windows for mass spectrom
     ![image](https://github.com/user-attachments/assets/88720fdb-60ee-405d-a80b-f9e56253051c)
 
     
-5. The Data format of the CSV file:
+6. The Data format of the CSV file:
 
     Provide skyline out put or your data in the following format:
     ![image](https://github.com/user-attachments/assets/02a7e99b-a45b-4fbe-a90e-2323f8f755df)
@@ -85,3 +85,6 @@ An interactive web application for designing isolation windows for mass spectrom
 ## Acknowledgments:
   List any funding sources or acknowledgments from your paper
   Any libraries or tools that were particularly helpful
+
+## Contact
+  Huan-Chi Chiu: isaac94028@gmail.com
