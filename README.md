@@ -81,6 +81,7 @@ An interactive web application for designing isolation windows for mass spectrom
 
 ## License:
   This project is licensed under the MIT License - see the LICENSE file for details.
+  LICENSE
   
 ## Acknowledgments:
   List any funding sources or acknowledgments from your paper
